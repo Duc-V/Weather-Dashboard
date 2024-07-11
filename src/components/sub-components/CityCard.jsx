@@ -1,14 +1,19 @@
 import React from 'react'
 import '../components.css'
-import image from "../../assets/clear_sky_night.png"
 
-function CityCard({cityObj}) {
-  const temp_max = Math.round(Number(cityObj.weather.main.temp_max) - 273.15);
-  const temp_min = Math.round(Number(cityObj.weather.main.temp_min) - 273.15);
+function CityCard({cityObj, setCurrentCity}) {
+  const temp_max = Math.round(Number(cityObj.weather.main.temp_max));
+  const temp_min = Math.round(Number(cityObj.weather.main.temp_min));
+
+  const handleClick = () => {
+    console.log("click")
+    setCurrentCity(cityObj);
+  };
+
   return (
-    <div className='city-card'>
+    <div className='city-card' onClick={handleClick}>
       <div className="icon">
-        <img src={image} alt="" />
+        <img src={`https://openweathermap.org/img/wn/${cityObj.weather.weather[0].icon}@2x.png` } width={'80px'} alt="" />
       </div>
         <div className="city-name">
           {cityObj.city}

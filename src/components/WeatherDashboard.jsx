@@ -1,22 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import LeftBar from './LeftBar';
 import TodayWeather from './TodayWeather';
-import TodayInfo from './Forecast';
+import Forecast from './Forecast';
 import Map from './Map';
 import TempGraph from './TempGraph';
 import BottomBar from './BottomBar';
 import fetchCityCoordinates from '../fetchers/fetchCityCoordinates'
 import fetchCityWeather from '../fetchers/fetchCityWeather';
+import fetchWeatherForecast from "../fetchers/fetchWeatherForecast";
+import TopBar from './TopBar';
 import './components.css'
 function WeatherDashboard() {
 
+
+    const [currentCity, setCurrentCity] = useState(null);
+    const [weatherForecast, setWeatherForecase] = useState(null)
     // default cities
     const cities = [
       {city: "New York County", state: "New York" , country: "US"}
       ,{city: "Tokyo", state: "" , country: "JP"}, 
-      {city: "Lisbon", state: "" , country: "PT"}];
+      {city: "Lisbon", state: "" , country: "PT"},
+      {city: "Kyoto", state: "" , country: "JP"},
+    ];
 
     const [citiesData, setCitiesData] = useState(null);
+
+    useEffect(() => {
+      const fetchForecast = async () => {
+        try {
+
+          if (currentCity !==null) {
+            console.log(currentCity);
+            const forecast = await fetchWeatherForecast(currentCity.coordinates.lat, currentCity.coordinates.lon);
+            setWeatherForecase(forecast);
+          }
+          
+        }
+        catch (e) {
+          console.error('Error fetching weather data:', e);
+        }
+      }
+
+      fetchForecast ();
+    },[currentCity])
+
 
     useEffect(() => {
       const fetchDataForCities = async () => {
@@ -40,14 +67,13 @@ function WeatherDashboard() {
 
     return (
       <div className='weather-dashboard'>
-
-        <div className="top-bar"></div>
+        <TopBar/>
         <LeftBar/>
         <TodayWeather/>
-        <TodayInfo/>
+        <Forecast currentCity={currentCity} weatherForecast={weatherForecast}/>
         <Map/>
         <TempGraph/>
-        <BottomBar citiesData={citiesData ? citiesData : []}/>
+        <BottomBar citiesData={citiesData ? citiesData : []} setCurrentCity={setCurrentCity}/>
       </div>
     );
   }

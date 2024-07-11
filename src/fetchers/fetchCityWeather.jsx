@@ -1,7 +1,7 @@
 const fetchWeatherData = async (lat, lon) => {
   try {
     
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=edb33546896b6ad3e1d57b86d9c0c8db`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=edb33546896b6ad3e1d57b86d9c0c8db`;
     const response = await fetch(apiUrl);
     if (!response.ok) {
       throw new Error('Network response was not ok.');

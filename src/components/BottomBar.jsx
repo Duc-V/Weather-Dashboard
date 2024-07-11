@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react';
 import useCityCoordinates from '../fetchers/fetchCityCoordinates'
 import useCityWeather from '../fetchers/fetchCityWeather';
 
-function BottomBar({ citiesData }) {
-  console.log(citiesData)
+function BottomBar({ citiesData , setCurrentCity}) {
+  // console.log(citiesData)
   return (
     <div className="bottom-bar">
       {citiesData.map((cityObj) => (
-        <CityCard key={cityObj.city} cityObj={cityObj} />
+        <CityCard key={cityObj.city} cityObj={cityObj} setCurrentCity={setCurrentCity} />
       ))}
     </div>
   );
