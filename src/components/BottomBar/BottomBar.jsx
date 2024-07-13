@@ -1,10 +1,10 @@
 import React from 'react'
 import './components.css'
-import CityCard from './sub-components/CityCard'
+import CityCard from './CityCard'
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import useCityCoordinates from '../fetchers/fetchCityCoordinates'
-import useCityWeather from '../fetchers/fetchCityWeather';
+import useCityCoordinates from '../../fetchers/fetchCityCoordinates'
+import useCityWeather from '../../fetchers/fetchCityWeather';
 
 function BottomBar({ citiesData , setCurrentCity}) {
   // console.log(citiesData)

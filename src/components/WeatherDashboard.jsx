@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import LeftBar from './LeftBar';
-import TodayWeather from './TodayWeather';
-import Forecast from './Forecast';
-import Map from './Map';
-import TempGraph from './TempGraph';
-import BottomBar from './BottomBar';
+import TodayWeather from './TodayWeather/TodayWeather';
+import Forecast from './Forecast/Forecast';
+import Map from './Map/Map';
+import TempGraph from './TempGraph/TempGraph';
+import BottomBar from './BottomBar/BottomBar';
 import fetchCityCoordinates from '../fetchers/fetchCityCoordinates'
 import fetchCityWeather from '../fetchers/fetchCityWeather';
 import fetchWeatherForecast from "../fetchers/fetchWeatherForecast";
-import TopBar from './TopBar';
+import TopBar from './TopBar/TopBar';
+import LeftBar from './LeftBar/LeftBar';
 import './components.css'
 function WeatherDashboard() {
 

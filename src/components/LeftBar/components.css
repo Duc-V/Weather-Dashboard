@@ -1,0 +1,15 @@
+/* left-bar */
+.left-bar{
+    grid-area: left-bar;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+.left-bar-content{
+    height: 100%;
+    width: 50%;
+    background-color: #2e2e38;
+    border-radius: 1.3em;
+}

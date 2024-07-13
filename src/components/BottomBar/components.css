@@ -1,0 +1,44 @@
+/* bottom bar */
+.bottom-bar{
+    grid-area: bottom-bar;
+    margin-bottom:1em;
+    margin-right: 1.5em;
+    display: flex;
+    gap:1em;
+}
+
+.city-card{
+    position: relative;
+    height: 100%;
+    width: 12em; /* Initial width */
+    border-radius: 1.5em;
+    background-color: #2e2e38;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    border: solid rgb(180, 180, 180, 0.3) 1px;
+}
+
+.city-card .icon{
+    position: absolute;
+    top: -40px; 
+    width: 100%;
+}
+
+
+
+.city-name{
+    margin-top: 1.5em;
+    font-size: 1.7em;
+}
+
+
+
+.temperature{
+    margin-top: 1em;
+}
+
+.temp-max{
+    font-size: 2.3em;
+    margin-right: 5px;
+}

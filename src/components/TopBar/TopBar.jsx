@@ -1,6 +1,6 @@
 import React from 'react'
-import './components.css'
-import profileImage from '../assets/profile.png'
+// import './components.css'
+import profileImage from '../../assets/profile.png'
 function TopBar() {
 
   // Create a new Date object
