@@ -4,16 +4,16 @@
     background-color: #1e1f24;
     font-family: monospace;
     display: grid;
-    grid-template-columns: 0.2fr 1.3fr 1.2fr; /* Adjusting the fractions to fit better */
-    grid-template-rows: 0.3fr 0.8fr 1.2fr 0.5fr; /* Adjusting the fractions to fit better */
+    grid-template-columns: 2fr 1fr; /* Adjusting the fractions to fit better */
+    grid-template-rows: 0.1fr 1.2fr 1.5fr; /* Adjusting the fractions to fit better */
     grid-template-areas: 
-        "left-bar top-bar top-bar"
-        "left-bar forecast map"
-        "left-bar today-weather temp-graph"
-        "left-bar bottom-bar bottom-bar"
+        "top-bar top-bar"
+        "forecast map"
+        "today-weather bottom-bar"
     ;
     border: 1px solid #000;
-    gap: 1.5em;
+    gap: 2em;
+    padding: 2vw;
 }
 
 /* top bar */
@@ -22,13 +22,12 @@
     font-family: monospace;
     color: white;
     margin-top: 2em;
-    margin-right: 1.5em;
     display: flex;
     align-items: flex-end;
 }
 
 .profile img{
-    height: 40px;
+    height: 7vh;
     border-radius: 100%;
     margin-right: 1em;
 }

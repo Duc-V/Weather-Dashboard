@@ -1,25 +1,76 @@
 /* today info */
 .map {
     grid-area: map;
-    margin-right: 1.5em;
+    /* margin-right: 1.5em; */
     background-color: #2e2e38;
     border-radius: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .map-content {
-    height: 70%;
+    height: 80%;
     width: 100%;
     border-radius: 1.5em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Adjusting the fractions to fit better */
-    grid-template-rows: 1fr 1fr; /* Adjusting the fractions to fit better */
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
     gap: 1em;
     padding: 1em;
 }
 
-.gauge-chart {
-    /* height: 100%;
-    width: 100%; */
-    /* Ensure that the gauge chart respects the parent's padding and border radius */
-    box-sizing: border-box;
+.air-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    border-radius: 1.5em;
+    background-color: #c9e6ea;
+    font-weight: bold;
+    color: #2e2e38;
+}
+
+.indicator{
+    position: absolute;
+    top:10px;
+    left:10px;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+}
+
+.overall-quality{
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+}
+.value {
+    font-size: 1vw;
+}
+.name{
+    font-family: monospace;
+    font-size: 2vw;
+}
+
+.Good{
+    background-color: #079450;
+}
+
+.Fair {
+    background-color: #ffb300;
+}
+
+.Moderate{
+    background-color: #ff7e00;
+}
+
+.Poor{
+    background-color: #ff0000;
+}
+
+.Very-Poor{
+    background-color: #ff0000;
 }

@@ -35,7 +35,7 @@ function GaugeChart({value, valueMax, variable, intrvl, round}) {
         className='gaugetext'
         sx={{
           [`& .${gaugeClasses.valueText}`]: {
-            fontSize: "2vw",
+            fontSize: "1.5vw",
             transform: 'translate(0px, 0px)',
             '& tspan': {
               fill: '#c9e6ea', // Adjust the text color here

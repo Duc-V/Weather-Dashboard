@@ -74,11 +74,9 @@ function WeatherDashboard() {
     return (
       <div className='weather-dashboard'>
         <TopBar/>
-        <LeftBar/>
         <TodayWeather/>
         <Forecast currentCity={currentCity} weatherForecast={weatherForecast}/>
         <Map/>
-        <TempGraph/>
         <BottomBar citiesData={citiesData ? citiesData : []} setCurrentCity={setCurrentCity}/>
       </div>
     );

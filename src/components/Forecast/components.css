@@ -7,7 +7,7 @@
 .forecast-content{
     display: grid;
     grid-template-columns: 1fr; /* Adjusting the fractions to fit better */
-    grid-template-rows: 1fr 1fr; /* Adjusting the fractions to fit better */
+    grid-template-rows: 0.8fr 1.2fr; /* Adjusting the fractions to fit better */
     grid-template-areas: 
     "top"
     "bottom";
@@ -62,8 +62,12 @@
 }
 
 .weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 3px;
-    min-width: 4vw; /* Set a fixed width for each card */
+    min-width: 5vw; /* Set a fixed width for each card */
     background-color: #c9e6ea;
     color: #2e2e38;
     font-size: 0.8vw;
@@ -74,7 +78,7 @@
 }
 
 .weather-card img {
-    max-width: 3vw;
+    max-width: 5vw;
 }
 
 
