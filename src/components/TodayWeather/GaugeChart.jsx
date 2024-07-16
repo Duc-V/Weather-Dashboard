@@ -16,7 +16,6 @@ function GaugeChart({value, valueMax, variable, intrvl, round}) {
       }else{
         newValue = Number(newValue.toFixed(2))
       }
-      console.log("", newValue);
       setNewValue(newValue);
     }, intrvl);
 

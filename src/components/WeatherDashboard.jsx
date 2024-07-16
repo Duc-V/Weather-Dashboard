@@ -26,12 +26,18 @@ function WeatherDashboard() {
     const [citiesData, setCitiesData] = useState(null);
 
     useEffect(() => {
+      if (currentCity === null){
+        return;
+      }
       const fetchForecast = async () => {
         try {
-
           if (currentCity !==null) {
-            console.log(currentCity);
             const forecast = await fetchWeatherForecast(currentCity.coordinates.lat, currentCity.coordinates.lon);
+
+            forecast.city = currentCity.city;
+            forecast.coordinates = currentCity.coordinates;
+            forecast.currentTemperature = Math.floor(currentCity.weather.main.feels_like)
+            console.log(currentCity)
             setWeatherForecase(forecast);
           }
           

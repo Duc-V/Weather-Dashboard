@@ -1,0 +1,100 @@
+
+
+/* today info */
+.forecast{
+    grid-area: forecast;
+}
+.forecast-content{
+    display: grid;
+    grid-template-columns: 1fr; /* Adjusting the fractions to fit better */
+    grid-template-rows: 1fr 1fr; /* Adjusting the fractions to fit better */
+    grid-template-areas: 
+    "top"
+    "bottom";
+    height: 100%;
+    width: 100%;
+    background-color: #2e2e38;
+    border-radius: 1.5em;
+}
+.top{
+    grid-area:top;
+    padding: 1vw;
+}
+.top .icon{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: auto;
+}
+
+.icon img{
+    height: 100%;
+}
+
+.location{
+    margin-right: 1vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.location .city-name{
+    padding: 0;
+    margin: 0;
+    font-size: 2vw;
+}
+
+
+
+.bottom {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 1em;
+    color: #c9e6ea;
+    grid-area: bottom;
+    display: flex;
+    gap: 1em;
+}
+
+.weather-card {
+    padding-top: 3px;
+    min-width: 4vw; /* Set a fixed width for each card */
+    background-color: #c9e6ea;
+    color: #2e2e38;
+    font-size: 0.8vw;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 1vw;
+    text-align: center; /* Center the content */
+}
+
+.weather-card img {
+    max-width: 3vw;
+}
+
+
+.weather-card .temperature{
+    padding: 0;
+    margin: 0;
+}
+
+/* For WebKit browsers */
+.bottom::-webkit-scrollbar {
+    height: 1em; /* Adjust scrollbar height */
+
+}
+
+.bottom::-webkit-scrollbar-track {
+    background: #2e2e38; /* Track color */
+    margin: 2em;
+}
+
+.bottom::-webkit-scrollbar-thumb {
+    background-color: #c9e6ea; /* Thumb color */
+    border-radius: 10px; /* Roundness of the scrollbar */
+}

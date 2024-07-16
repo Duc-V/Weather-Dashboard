@@ -45,8 +45,8 @@
 
 .box-name{
     color: black;
-    font-size: 0.9vw;
-    margin: 1em;
+    font-size: 0.8vw;
+    margin: 0.7vw;
     padding-left: 0.5em;
     padding-right: 0.5em;
     position: absolute;
@@ -161,31 +161,11 @@
     font-family: monospace;
     font-weight: bold;
     margin-bottom:0.5vw ;
-    height: 7vw;
+    height: 6vw;
 }
 
-/* today info */
-.forecast{
-    grid-area: forecast;
-}
-.forecast-content{
-    height: 100%;
-    width: 100%;
-    background-color: #2e2e38;
-    border-radius: 1.5em;
-}
 
-/* today info */
-.map{
-    grid-area: map;
-    margin-right:1.5em;
-}
-.map-content{
-    height: 100%;
-    width: 100%;
-    background-color: #2e2e38;
-    border-radius: 1.5em;
-}
+
 
 /* temp graph */
 .temp-graph{

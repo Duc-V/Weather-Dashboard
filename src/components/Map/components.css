@@ -1,0 +1,25 @@
+/* today info */
+.map {
+    grid-area: map;
+    margin-right: 1.5em;
+    background-color: #2e2e38;
+    border-radius: 1.5em;
+}
+
+.map-content {
+    height: 70%;
+    width: 100%;
+    border-radius: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Adjusting the fractions to fit better */
+    grid-template-rows: 1fr 1fr; /* Adjusting the fractions to fit better */
+    gap: 1em;
+    padding: 1em;
+}
+
+.gauge-chart {
+    /* height: 100%;
+    width: 100%; */
+    /* Ensure that the gauge chart respects the parent's padding and border radius */
+    box-sizing: border-box;
+}

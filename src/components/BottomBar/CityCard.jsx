@@ -6,7 +6,6 @@ function CityCard({cityObj, setCurrentCity}) {
   const temp_min = Math.round(Number(cityObj.weather.main.temp_min));
 
   const handleClick = () => {
-    console.log("click")
     setCurrentCity(cityObj);
   };
 

@@ -4,7 +4,7 @@
     background-color: #1e1f24;
     font-family: monospace;
     display: grid;
-    grid-template-columns: 0.2fr 1fr 1.5fr; /* Adjusting the fractions to fit better */
+    grid-template-columns: 0.2fr 1.3fr 1.2fr; /* Adjusting the fractions to fit better */
     grid-template-rows: 0.3fr 0.8fr 1.2fr 0.5fr; /* Adjusting the fractions to fit better */
     grid-template-areas: 
         "left-bar top-bar top-bar"
