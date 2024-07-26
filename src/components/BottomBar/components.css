@@ -47,6 +47,7 @@
 
 @media (max-width: 768px) {
     .bottom-bar {
+        overflow-y:visible;
         display: flex;
         flex-direction: row;
     }
