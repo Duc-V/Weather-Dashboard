@@ -102,3 +102,18 @@
     background-color: #c9e6ea; /* Thumb color */
     border-radius: 10px; /* Roundness of the scrollbar */
 }
+
+@media (max-width: 768px) {
+    .weather-card{
+        min-width: 15%;
+        font-size: 0.7rem;
+    }
+
+    .weather-card img {
+        max-width: 10vw;
+    }
+
+    .location .city-name{
+        font-size: 1rem;
+    }
+}

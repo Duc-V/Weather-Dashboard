@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+    .profile-text .name{
+        font-size: 1rem;
+    }
+}

@@ -21,7 +21,7 @@ function CityCard({cityObj, setCurrentCity}) {
         </div>
         </div>
         <div className="icon">
-          <img src={`https://openweathermap.org/img/wn/${cityObj.weather.weather[0].icon}@2x.png` } width={'80px'} alt="" />
+          <img src={`https://openweathermap.org/img/wn/${cityObj.weather.weather[0].icon}@2x.png` } alt="" />
       </div>
       </div>
   )

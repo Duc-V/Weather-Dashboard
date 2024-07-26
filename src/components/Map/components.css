@@ -74,3 +74,27 @@
 .Very-Poor{
     background-color: #ff0000;
 }
+
+@media (max-width: 768px) {
+    .overall-quality{
+        font-size: 1rem;
+    }
+
+    .air-card{
+        border-radius: 10px;
+        padding: 5px 0;
+    }
+
+    .air-card .name{
+        font-size: 1rem;
+    }
+
+    .air-card .value{
+        font-size: 0.7rem;
+    }
+
+    .air-card .indicator{
+        font-size: 4rem;
+    }
+
+}

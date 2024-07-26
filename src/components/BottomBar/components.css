@@ -4,7 +4,6 @@
     flex-direction: column;
     gap: 1em;
     overflow: auto;
-    /* Hide scrollbar */
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
 }
@@ -44,4 +43,20 @@
 .temp-max{
     font-size: 1.3em;
     margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .bottom-bar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .city-card .city-name{
+        font-size: 1rem;
+    }
+
+    .city-card .icon{
+        height: 50px;
+        max-width: 50px;
+    }
 }

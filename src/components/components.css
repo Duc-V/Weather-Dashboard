@@ -38,7 +38,51 @@
     font-size: xx-large;
 }
 
+/* Mobile layout */
+@media (max-width: 768px) {
 
+    .weather-dashboard {
+        height: 100vh; /* Full viewport height */
+        width: 100vw; /* Full viewport width */
+        background-color: #1e1f24;
+        font-family: monospace;
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr; /* Adjust as needed */
+        grid-template-areas:
+            "top-bar"
+            "forecast"
+            "bottom-bar"
+            "today-weather"
+            "map";
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .top-bar {
+        margin-top: 1em;
+    }
+
+    .profile img {
+        height: 5vh;
+        margin-right: 0.5em;
+    }
+
+    .profile-text .date {
+        font-size: large;
+    }
+}
+
+/* Further adjustments for very small screens */
+/* @media (max-width: 480px) {
+    .profile img {
+        height: 4vh;
+    }
+
+    .profile-text .date {
+        font-size: medium;
+    }
+} */
 
 
 
