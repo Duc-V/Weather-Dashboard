@@ -8,7 +8,6 @@ import fetchCityCoordinates from '../fetchers/fetchCityCoordinates'
 import fetchCityWeather from '../fetchers/fetchCityWeather';
 import fetchWeatherForecast from "../fetchers/fetchWeatherForecast";
 import TopBar from './TopBar/TopBar';
-import LeftBar from './LeftBar/LeftBar';
 import './components.css'
 function WeatherDashboard() {
 
@@ -22,6 +21,8 @@ function WeatherDashboard() {
       {city: "Lisbon", state: "" , country: "PT"},
       {city: "Kyoto", state: "" , country: "JP"},
     ];
+
+    const [currentWeather, setCurrentWeather] = useState(null);
 
     const [citiesData, setCitiesData] = useState(null);
 
@@ -39,6 +40,13 @@ function WeatherDashboard() {
             forecast.currentTemperature = Math.floor(currentCity.weather.main.feels_like)
             console.log(currentCity)
             setWeatherForecase(forecast);
+            setCurrentWeather({
+              humidity: currentCity.weather.main.humidity,
+              pressure: currentCity.weather.main.pressure,
+              suntime: currentCity.weather.sys,
+              wind: currentCity.weather.wind,
+              visibility: currentCity.weather.visibility
+            })
           }
           
         }
@@ -63,6 +71,14 @@ function WeatherDashboard() {
     
           const results = await Promise.all(dataPromises);
           setCitiesData(results);
+          setCurrentCity(results[1]);
+          setCurrentWeather({
+            humidity: results[1].weather.main.humidity,
+            pressure: results[1].weather.main.pressure,
+            suntime: results[1].weather.sys,
+            wind: results[1].weather.wind,
+            visibility: results[1].weather.visibility
+          })
         } catch (error) {
           console.error('Error fetching weather data:', error);
         }
@@ -74,7 +90,7 @@ function WeatherDashboard() {
     return (
       <div className='weather-dashboard'>
         <TopBar/>
-        <TodayWeather/>
+        <TodayWeather weather={currentWeather}/>
         <Forecast currentCity={currentCity} weatherForecast={weatherForecast}/>
         <Map/>
         <BottomBar citiesData={citiesData ? citiesData : []} setCurrentCity={setCurrentCity}/>

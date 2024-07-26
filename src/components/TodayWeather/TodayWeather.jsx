@@ -5,13 +5,14 @@ import Compass from './WindCompass'
 import { useState } from 'react'
 import sunriseImg from "../../assets/sunrise.png"
 import sunsetImg from "../../assets/sunset.png"
-function TodayWeather() {
-  const [humidity, setHumidity] = useState(70);
-  const [wind, setWind] = useState({"speed": 3.09,"deg": 355});
+function TodayWeather({weather}) {
 
-
-  const sunrise = 1720649948;
-  const sunset = 1720697884;
+  const humidity = weather ? weather.humidity : 0
+  const wind = weather ? weather.wind : 0
+  const pressure = weather ? weather.pressure : 0
+  const sunrise = weather ? weather.suntime.sunrise : 0
+  const sunset = weather ? weather.suntime.sunrise : 0
+  const visibility = weather ? weather.visibility : 0
 
   // Convert to Date objects
   const sunriseDate = new Date(sunrise * 1000);
@@ -32,7 +33,7 @@ function TodayWeather() {
           </div>
           <div className="pressure">
             <div className="box-name">Pressure</div>
-            <GaugeChart value={1010} valueMax={2000} variable={5} intrvl={5000} round={true}/>
+            <GaugeChart value={pressure} valueMax={2000} variable={5} intrvl={5000} round={true}/>
             <span className="unit"> hPa</span>
           </div>
           <div className="wind-direction">
@@ -52,7 +53,7 @@ function TodayWeather() {
           <div className="visibility">
             <div className="box-name">Visibility</div>
             <div>
-              <span className="value">5.2</span>
+              <span className="value">{visibility / 1000}</span>
               <span className="unit"> km</span>
             </div>
 

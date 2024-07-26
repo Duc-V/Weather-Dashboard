@@ -4,7 +4,6 @@ import './Forecast'
 import WeatherCard from './WeatherCard'
 
 function Forecast({ currentCity, weatherForecast }) {
-  console.log(weatherForecast)
   return (
     <div className="forecast">
       <div className="forecast-content">
