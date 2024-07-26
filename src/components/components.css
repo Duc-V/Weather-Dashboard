@@ -42,13 +42,13 @@
 @media (max-width: 768px) {
 
     .weather-dashboard {
-        height: 100vh; /* Full viewport height */
+        height: 127vh; /* Full viewport height */
         width: 100vw; /* Full viewport width */
         background-color: #1e1f24;
         font-family: monospace;
         display: grid;
         grid-template-columns: 1fr; /* Single column layout */
-        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr; /* Adjust as needed */
+        grid-template-rows: 0.5fr 1fr 0.6fr 1fr 1fr; /* Adjust as needed */
         grid-template-areas:
             "top-bar"
             "forecast"
